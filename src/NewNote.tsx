@@ -1,3 +1,4 @@
+import { NoteData } from "./App";
 import { NoteForm } from "./NoteForm";
 
 type NewNoteProps = {
