@@ -17,7 +17,6 @@ export function NoteForm({
   availableTags,
   title = "",
   markdown = "",
-  tags = [],
 }: NoteFormProps) {
   const titleRef = useRef<HTMLInputElement>(null);
   const markdownRef = useRef<HTMLTextAreaElement>(null);
@@ -60,7 +59,6 @@ export function NoteForm({
                 options={availableTags.map((tag) => {
                   return { label: tag.label, value: tag.id };
                 })}
-                isMulti
                 onChange={(tags) => {
                   setSelectedTags(
                     tags.map((tag) => {
@@ -68,6 +66,7 @@ export function NoteForm({
                     })
                   );
                 }}
+                isMulti
               />
             </Form.Group>
           </Col>

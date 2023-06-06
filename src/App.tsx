@@ -36,7 +36,7 @@ export type Tag = {
 };
 
 function App() {
-  const [notes, setNotes] = useLocalStorage<Note[]>("notes", []);
+  const [notes, setNotes] = useLocalStorage<RawNote[]>("NOTES", []);
   const [tags, setTags] = useLocalStorage<Tag[]>("TAGS", []);
 
   const notesWithTags = useMemo(() => {
